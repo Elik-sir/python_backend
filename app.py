@@ -4,9 +4,6 @@ import numpy as np
 from PIL import Image
 from pyzbar.pyzbar import decode
 
-
-
-
 app = Flask(__name__)
 
 @app.route("/getRoute",methods=["POST"])
@@ -18,4 +15,4 @@ def getRoute():
 
 
 if __name__ == '__main__':
- app.run(debug=True,host='0.0.0.0',port ="5020")
+ app.run(debug=True,host='0.0.0.0',port = 42693)
