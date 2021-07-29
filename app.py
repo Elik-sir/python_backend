@@ -1,6 +1,4 @@
 from flask import Flask,request
-import cv2
-import numpy as np
 from PIL import Image
 from pyzbar.pyzbar import decode
 
