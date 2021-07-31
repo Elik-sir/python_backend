@@ -1,10 +1,8 @@
-FROM ubuntu:latest
-MAINTAINER Eldar 'eldar@gmail.com'
-COPY ./requirements.txt /app/requirements.txt
+FROM python:3
+RUN pip install --upgrade pip
 RUN apt-get update -y
-RUN apt-get install -y python3-pip python-dev build-essential
+RUN apt-get install -y python3-pip python-dev build-essential libzbar0
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-ENTRYPOINT ['python']
-CMD ['main.py']
+CMD gunicorn app:app --bind 0.0.0.0:$PORT --reload

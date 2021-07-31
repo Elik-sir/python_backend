@@ -1,0 +1,22 @@
+<html>
+<head>
+
+</head>
+<body>
+<div id="2">
+
+</div>
+<table border="2">
+    <thead><th>Склада </th> <th>товар</th> <th>Количество</th></thead>
+    {%for el in articles %}
+    <tr><td>{{el.s}}</td> <td>{{el.item}}</td> <td>{{el.count}}</td>  </tr>
+    {% endfor %}</table>
+<a href="{{y}}">Вчера</a>     <br/>
+<a href="{{x}}">Завтра</a>
+<input type="date" onchange='location.href=`${this.value}` ' />
+<script src="{{url_for('static',filename='main.js')}}">
+    const w=(data)=>{
+    }
+</script>
+</body>
+</html>
